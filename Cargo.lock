@@ -3460,6 +3460,10 @@ name = "next-custom-transforms"
 version = "0.0.0"
 dependencies = [
  "anyhow",
+ "once_cell",
+ "regex",
+ "serde",
+ "serde_json",
  "chrono",
  "convert_case 0.5.0",
  "easy-error",
@@ -3482,6 +3486,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "next-page-static-info"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "lazy_static",
+ "swc_core",
+ "testing",
+]
+
+[[package]]
 name = "next-swc-napi"
 version = "0.0.0"
 dependencies = [
@@ -3496,7 +3510,9 @@ dependencies = [
  "next-build",
  "next-core",
  "next-custom-transforms",
+ "next-page-static-info",
  "once_cell",
+ "regex",
  "sentry",
  "serde",
  "serde_json",
@@ -8741,9 +8757,11 @@ dependencies = [
  "getrandom",
  "js-sys",
  "next-custom-transforms",
+ "next-page-static-info",
  "once_cell",
  "parking_lot_core 0.8.0",
  "path-clean",
+ "regex",
  "serde",
  "serde-wasm-bindgen",
  "serde_json",
